@@ -1,9 +1,9 @@
 {
+  description = "Base configuration for Jorge's Laptop Ultra";
 
-  description = "Base configuration for my Linux Systems";
-  
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -23,5 +23,4 @@
       };
     };
   };
-
 }

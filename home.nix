@@ -1,7 +1,6 @@
-{ config, pkgs, ... } :
+{ config, pkgs, ... }:
 
 {
-  # center new windows for gnome, dconf setting for home manager
   dconf.settings = {
     "org/gnome/mutter" = {
       center-new-windows = true;
