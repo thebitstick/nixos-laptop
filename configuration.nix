@@ -8,7 +8,8 @@
 
   networking = {
     hostName = "Jorges-Laptop-Ultra";
-    nameservers = [ # Cloudflare DNS
+    nameservers = [
+      # Cloudflare DNS
       "1.1.1.1"
       "1.0.0.1"
       "2606:4700:4700::1111"
@@ -18,7 +19,7 @@
 
   users.users.thebitstick = {
     isNormalUser = true;
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [ "networkmanager" "wheel" ];
     description = "TheBitStick";
     shell = pkgs.nushell;
   };
@@ -38,7 +39,7 @@
       eza
       fd
     ];
-    
+
     variables = {
       EDITOR = "nvim";
       VISUAL = "codium";
@@ -52,7 +53,7 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
-    settings.experimental-features = ["nix-command" "flakes"];
+    settings.experimental-features = [ "nix-command" "flakes" ];
   };
   system.stateVersion = "23.11";
 }
