@@ -19,7 +19,7 @@
 
   users.users.thebitstick = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" ];
     description = "TheBitStick";
     shell = pkgs.nushell;
   };
@@ -46,7 +46,9 @@
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+  };
   nix = {
     gc = {
       automatic = true;
