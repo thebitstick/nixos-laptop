@@ -19,7 +19,7 @@
 
   users.users.thebitstick = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     description = "TheBitStick";
     shell = pkgs.nushell;
   };

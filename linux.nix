@@ -60,5 +60,6 @@
   };
 
   security.rtkit.enable = true;
+  hardware.pulseaudio.enable = false;
   powerManagement.enable = true;
 }
