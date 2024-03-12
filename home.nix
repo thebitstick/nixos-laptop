@@ -29,29 +29,27 @@
     yt-dlp
 
     # Programming Languages
-    bun
     cargo
-    crystal
     nushell
     rustc
 
     # Graphical Apps
     # arduino-ide (x86_64 only)
     baobab
-    celluloid
-    cura
+    # celluloid
+    # cura
     # discord (x86_64 only)
     firefox
-    keepassxc
-    obs-studio
-    obsidian
-    openscad
-    prismlauncher
+    # keepassxc
+    # obs-studio
+    # obsidian
+    # openscad
+    # prismlauncher
     # (some rss reader)
     # sidequest (x86_64 only)
-    tenacity
+    # tenacity
     # tetrio-desktop (x86_64 only)
-    transmission
+    # transmission
     vscodium
   ];
 
