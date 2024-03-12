@@ -30,7 +30,6 @@
 
     # Programming Languages
     cargo
-    nushell
     rustc
 
     # Graphical Apps
@@ -53,10 +52,40 @@
     vscodium
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "TheBitStick";
-    userEmail = "the@bitstick.rip";
+  programs = {
+    git = {
+        enable = true;
+        userName = "TheBitStick";
+        userEmail = "the@bitstick.rip";
+    };
+    neovim = {
+      enable = true;
+    };
+    nushell = {
+      enable = true;
+      extraConfig = ''
+      $env.config.show_banner = false
+
+      $env.EDITOR = "nvim"
+      $env.VISUAL = "codium"
+
+      def clean [] {
+          nix-collect-garbage -d
+      }
+
+      def gc [url] {
+          cd ~/Developer/Git
+          git clone $url
+      }
+      '';
+      shellAliases = {
+        cat = "bat --plain --paging=never";
+        editv = "codium";
+        sedit = "sudo nvim";
+        edit = "nvim";
+        vim = "nvim";
+      };
+    };
   };
 
   programs.home-manager.enable = true;
